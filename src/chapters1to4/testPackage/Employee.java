@@ -1,19 +1,18 @@
 package chapters1to4.testPackage;
 import java.time.LocalDate;
+import chapter5.Person;
 
 /**
  * Ну и хуйня
  */
-public class Employee {
-    private String name = "unknown";
+public class Employee extends Person {
     private double salary = 7.25D;
     private LocalDate hireDay;
 
-    public Employee() {
-    }
+    public Employee() {}
 
-    public Employee(String n) {
-        name = n;
+    public Employee(String name) {
+        super(name);
     }
 
     public Employee(int yyyy) {
@@ -21,40 +20,41 @@ public class Employee {
     }
 
     public Employee(int dd, int mm, int yyyy) {
-        hireDay = LocalDate.of(yyyy, mm, dd);
+        this.hireDay = LocalDate.of(yyyy, mm, dd);
     }
 
     /**
      *
-     * @param n first name and last name
-     * @param s salary in USD
+     * @param name first name and last name
+     * @param salary salary in USD
      * @param dd day
      * @param mm month
      * @param yyyy year of hire
      */
-    public Employee(String n, double s, int dd, int mm, int yyyy) {
-        name = n;
-        salary = s;
-        hireDay = LocalDate.of(yyyy, mm, dd);
+    public Employee(String name, double salary, int dd, int mm, int yyyy) {
+        super(name);
+        this.salary = salary;
+        this.hireDay = LocalDate.of(yyyy, mm, dd);
     }
 
     public void raiseSalary(int perc) {
-        salary *= (double) perc / 100D;
-    }
-
-    public String getName() {
-        return name;
+        this.salary *= (double) perc / 100D;
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public LocalDate getHireDay() {
         return hireDay;
     }
 
-    public void setSalary(double s) {
-        salary = s;
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    @Override
+    public String getDescription() {
+        return "an Employee with " + this.salary + "USD salary";
     }
 }

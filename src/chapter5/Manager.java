@@ -11,6 +11,6 @@ public class Manager extends Employee {
 
     @Override
     public double getSalary() {
-        return super.getSalary() + bonus;
+        return super.getSalary() + this.bonus;
     }
 }
