@@ -13,12 +13,16 @@ public class Main {
         boss.setBonus(150);
         System.out.println(boss.getSalary());
         var ppl = new Person[3];
-        ppl[0] = new Student("Vassili Poopkin", "Anal fisting");
+        ppl[0] = new Student("Stepan Bylkov", "Anal fisting");
         ppl[1] = new Employee("Tim Marshall");
         ppl[2] = boss;
 
         for (var p : ppl) {
             System.out.println(p.getDescription() + " " + (p instanceof Manager));
+        }
+
+        for (int i = 0; i < ppl.length; i++) {
+            System.out.println(ppl[i].equals(boss));
         }
     }
 }

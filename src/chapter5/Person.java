@@ -18,8 +18,8 @@ public abstract class Person {
     public boolean equals(Object otherObj) {
         if (this == otherObj) return true;
         if (otherObj == null) return false;
-        if (this.getClass() != otherObj.getClass()) return false;
-        Person other = (Person) otherObj;
+        // Pattern variable
+        if (!(otherObj instanceof Person other)) return false;
         return name.equals(other.name);
     }
 
