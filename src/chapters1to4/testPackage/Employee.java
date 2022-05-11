@@ -57,4 +57,9 @@ public class Employee extends Person {
     public String getDescription() {
         return "an Employee with " + this.salary + "USD salary";
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "[salary=" + this.salary + ",hireDay=" + this.hireDay + "]";
+    }
 }

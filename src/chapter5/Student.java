@@ -12,4 +12,9 @@ public class Student extends Person {
     public String getDescription() {
         return "a student majoring in " + this.major;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "[major=" + this.major + "]";
+    }
 }

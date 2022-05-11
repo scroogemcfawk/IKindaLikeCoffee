@@ -23,5 +23,10 @@ public abstract class Person {
         return name.equals(other.name);
     }
 
+    public String toString() {
+        return this.getClass().getName() + "[name=" + this.name + "]";
+    }
+
+
 
 }

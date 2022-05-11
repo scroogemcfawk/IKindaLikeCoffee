@@ -18,7 +18,7 @@ public class Main {
         ppl[2] = boss;
 
         for (var p : ppl) {
-            System.out.println(p.getDescription() + " " + (p instanceof Manager));
+            System.out.println(p.toString());
         }
 
         for (int i = 0; i < ppl.length; i++) {

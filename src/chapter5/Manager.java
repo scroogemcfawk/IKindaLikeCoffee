@@ -22,4 +22,8 @@ public class Manager extends Employee {
     public String getDescription() {
         return "a mf MANAGER with " + (super.getSalary() + this.bonus) + "USD salary";
     }
+
+    public String toString() {
+        return super.toString() + "[bonus=" + this.bonus + "]";
+    }
 }
